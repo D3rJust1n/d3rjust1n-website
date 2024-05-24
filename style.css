@@ -1,0 +1,101 @@
+:root {
+    --background: #2a2a2a;
+    --fontcolor: #27efc1;
+    --button-bg: #333333;
+    --username-color: #7e00ff;
+    --icon-size: 30px;
+    --button-radius: 22px;
+    --button-padding: 12px 20px;
+    --button-margin: 10px 0;
+    --button-width: 80%;
+    --button-max-width: 360px;
+    --button-hover-translate: -3px;
+    --button-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    --button-hover-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+    --media-query-width: 768px;
+    --transition-time: 0.5s;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--fontcolor);
+    text-align: center;
+}
+
+.profile-photo {
+    border-radius: 100%;
+    width: 175px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--username-color);
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-button {
+    background-color: var(--button-bg);
+    font-size: 1.2em;
+    color: #27efc1;
+    border: none;
+    border-radius: var(--button-radius);
+    padding: var(--button-padding);
+    margin: var(--button-margin);
+    width: var(--button-width);
+    max-width: var(--button-max-width);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: var(--button-shadow);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-time);
+    text-align: center;
+}
+
+.social-button img {
+    height: var(--icon-size);
+    margin-right: 15px;
+}
+
+.social-button span {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 35px;
+}
+
+.social-button:hover {
+    transform: translateY(var(--button-hover-translate));
+    box-shadow: var(--button-hover-shadow);
+    transition: var(--transition-time);
+}
+
+@media (max-width: var(--media-query-width)) {
+    .social-button {
+        width: 90%;
+    }
+}
